@@ -21,7 +21,7 @@ class SmileIDExpoModule : Module() {
                 ?: throw IllegalStateException("Context is not available")
 
             withContext(Dispatchers.IO) {
-                SmileID.setWrapperInfo(WrapperSdkName.ReactNativeExpo, "11.2.1")
+                SmileID.setWrapperInfo(WrapperSdkName.ReactNativeExpo, "11.2.7")
 
                 when {
                     // Case 1: Initialize with API key and config

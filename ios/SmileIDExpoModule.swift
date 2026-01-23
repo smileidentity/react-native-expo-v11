@@ -16,7 +16,7 @@ public class SmileIDExpoModule: Module {
                config: SmileConfig?,
                apiKey: String?
            ) async throws -> Void in
-				 SmileID.setWrapperInfo(name: .reactNativeExpo, version: "11.2.1")
+				 SmileID.setWrapperInfo(name: .reactNativeExpo, version: "11.2.7")
 
            if let apiKey = apiKey, let config = config {
                // Case 1: Initialize with API key and config
