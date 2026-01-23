@@ -87,6 +87,6 @@ android {
 
 dependencies {
     implementation("com.jakewharton.timber:timber:5.0.1")
-    implementation("com.smileidentity:android-sdk:11.1.6")
+    implementation("com.smileidentity:android-sdk:11.1.7")
     implementation("androidx.fragment:fragment-ktx:1.8.9")
 }
