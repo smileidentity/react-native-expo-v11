@@ -42,7 +42,8 @@ class SmileIDBiometricKYCView(context: Context, appContext: AppContext) : SmileI
                 onResult(
                     mapOf(
                         "selfieFile" to result.selfieFile.toString(),
-                        "livenessFiles" to result.livenessFiles.toString()
+                        "livenessFiles" to result.livenessFiles.toString(),
+                        "didSubmitBiometricJob" to result.didSubmitBiometricKycJob
                     )
                 )
             },
