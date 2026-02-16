@@ -3,7 +3,7 @@
 ## Unreleased
 
 ### Fixed
-* Fix `didSubmitBiometricJob` not being return on Android Biometric KYC Job.
+* Fix `didSubmitBiometricJob` not being returned from Android Biometric KYC Job.
 * Fix `extraPartnerParams` not being properly propagated on Android.
 
 ## 11.2.7 - January 23, 2026
