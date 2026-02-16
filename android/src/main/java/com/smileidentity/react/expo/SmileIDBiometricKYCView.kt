@@ -85,7 +85,7 @@ private fun BiometricKYCView(
             showAttribution = props.showAttribution,
             showInstructions = props.showInstructions,
             smileSensitivity = props.smileSensitivity,
-            extraPartnerParams = props.extraParams,
+            extraPartnerParams = props.extraPartnerParams,
             consentInformation = props.consentInformation,
             idInfo = props.idInfo
         ) { result ->
@@ -111,7 +111,7 @@ data class BiometricKYCProps(
     val skipApiSubmission: Boolean = false,
     val smileSensitivity: SmileSensitivity = SmileSensitivity.NORMAL,
     val useStrictMode: Boolean = false,
-    val extraParams: ImmutableMap<String, String> = persistentMapOf(),
+    val extraPartnerParams: ImmutableMap<String, String> = persistentMapOf(),
     val consentInformation: ConsentInformation ? = null,
     val idInfo: IdInfo = IdInfo(
         country = ""
