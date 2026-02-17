@@ -83,7 +83,7 @@ private fun EnhancedDocumentVerificationView(
             showInstructions = props.showInstructions,
             showAttribution = props.showAttribution,
             useStrictMode = props.useStrictMode,
-            extraPartnerParams = props.extraParams,
+            extraPartnerParams = props.extraPartnerParams,
             consentInformation = props.consentInformation
         ) { result ->
             when (result) {

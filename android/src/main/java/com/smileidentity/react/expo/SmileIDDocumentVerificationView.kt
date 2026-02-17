@@ -89,7 +89,7 @@ private fun DocumentVerificationView(
             showAttribution = props.showAttribution,
             smileSensitivity = props.smileSensitivity,
             useStrictMode = props.useStrictMode,
-            extraPartnerParams = props.extraParams
+            extraPartnerParams = props.extraPartnerParams
         ) { result ->
             when (result) {
                 is SmileIDResult.Success -> {
@@ -122,6 +122,6 @@ data class DocumentVerificationProps(
     val skipApiSubmission: Boolean = false,
     val smileSensitivity: SmileSensitivity = SmileSensitivity.NORMAL,
     val useStrictMode: Boolean = false,
-    val extraParams: ImmutableMap<String, String> = persistentMapOf(),
+    val extraPartnerParams: ImmutableMap<String, String> = persistentMapOf(),
     val consentInformation: ConsentInformation? = null
 )

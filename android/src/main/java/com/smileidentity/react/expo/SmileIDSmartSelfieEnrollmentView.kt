@@ -84,7 +84,7 @@ private fun SmartSelfieEnrollmentView(
             showInstructions = props.showInstructions,
             skipApiSubmission = props.skipApiSubmission,
             smileSensitivity = props.smileSensitivity,
-            extraPartnerParams = props.extraParams,
+            extraPartnerParams = props.extraPartnerParams,
         ) { result ->
            when(result) {
                is SmileIDResult.Success -> {
@@ -108,5 +108,5 @@ data class SmartSelfieProps(
     val skipApiSubmission: Boolean = false,
     val useStrictMode: Boolean = false,
     val smileSensitivity: SmileSensitivity  = SmileSensitivity.NORMAL,
-    val extraParams: ImmutableMap<String, String> = persistentMapOf()
+    val extraPartnerParams: ImmutableMap<String, String> = persistentMapOf()
 )

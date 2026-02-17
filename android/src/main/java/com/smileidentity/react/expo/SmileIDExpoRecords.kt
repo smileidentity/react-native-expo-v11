@@ -9,8 +9,7 @@ import com.smileidentity.models.SmileSensitivity
 import expo.modules.kotlin.records.Record
 import expo.modules.kotlin.records.Field
 import expo.modules.kotlin.types.Enumerable
-import kotlinx.collections.immutable.ImmutableMap
-import kotlinx.collections.immutable.persistentMapOf
+import kotlinx.collections.immutable.toImmutableMap
 import java.io.File
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.seconds
@@ -88,7 +87,7 @@ class DocumentVerificationParams : Record {
     var useStrictMode: Boolean = false
 
     @Field
-    var extraParams: ImmutableMap<String, String> = persistentMapOf()
+    var extraPartnerParams: Map<String, String> = emptyMap()
 }
 
 /*
@@ -125,7 +124,7 @@ internal fun DocumentVerificationParams.toDocumentVerificationProps(): DocumentV
         skipApiSubmission = this.skipApiSubmission,
         smileSensitivity = this.smileSensitivity.toSmileSensitivity(),
         useStrictMode = this.useStrictMode,
-        extraParams = this.extraParams
+        extraPartnerParams = this.extraPartnerParams.toImmutableMap()
     )
 }
 
@@ -182,7 +181,7 @@ class EnhancedDocumentVerificationParams : Record {
     var useStrictMode: Boolean = false
 
     @Field
-    var extraParams: ImmutableMap<String, String> = persistentMapOf()
+    var extraPartnerParams: Map<String, String> = emptyMap()
 
     @Field
     var consentInformation: ConsentInformationParams? = null
@@ -224,7 +223,7 @@ internal fun EnhancedDocumentVerificationParams.toDocumentVerificationProps(): D
         showAttribution = this.showAttribution,
         skipApiSubmission = this.skipApiSubmission,
         useStrictMode = this.useStrictMode,
-        extraParams = this.extraParams,
+        extraPartnerParams = this.extraPartnerParams.toImmutableMap(),
         consentInformation = this.consentInformation?.toConsentInformation()
     )
 }
@@ -276,7 +275,7 @@ class SmartSelfieParams: Record {
     var smileSensitivity: SmileSensitivityParams = SmileSensitivityParams.Normal
 
     @Field
-    var extraParams: ImmutableMap<String, String> = persistentMapOf()
+    var extraPartnerParams: Map<String, String> = emptyMap()
 }
 
 /*
@@ -293,7 +292,7 @@ internal fun SmartSelfieParams.toSmartSelfieProps(): SmartSelfieProps {
         skipApiSubmission = this.skipApiSubmission,
         useStrictMode = this.useStrictMode,
         smileSensitivity = this.smileSensitivity.toSmileSensitivity(),
-        extraParams = this.extraParams
+        extraPartnerParams = this.extraPartnerParams.toImmutableMap()
     )
 }
 
@@ -335,7 +334,7 @@ class BiometricKYCParams: Record {
     var idInfo: IdInfoParams? = null
 
     @Field
-    var extraParams: ImmutableMap<String, String> = persistentMapOf()
+    var extraPartnerParams: Map<String, String> = emptyMap()
 }
 
 /*
@@ -378,7 +377,7 @@ internal fun BiometricKYCParams.toBiometricKYCProps(): BiometricKYCProps {
         smileSensitivity = this.smileSensitivity.toSmileSensitivity(),
         useStrictMode = this.useStrictMode,
         consentInformation = this.consentInformation?.toConsentInformation(),
-        extraParams = this.extraParams,
+        extraPartnerParams = this.extraPartnerParams.toImmutableMap(),
         idInfo = this.idInfo.toIdInfo()
     )
 }

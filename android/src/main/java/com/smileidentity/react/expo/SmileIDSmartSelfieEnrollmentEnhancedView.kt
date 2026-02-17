@@ -77,7 +77,7 @@ private fun EnhancedSmartSelfieEnrollmentView(
             showAttribution = props.showAttribution,
             showInstructions = props.showInstructions,
             skipApiSubmission = props.skipApiSubmission,
-            extraPartnerParams = props.extraParams,
+            extraPartnerParams = props.extraPartnerParams,
         ) { result ->
             when(result) {
                 is SmileIDResult.Success -> {
