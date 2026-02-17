@@ -1,6 +1,6 @@
 # Release Notes
 
-## Unreleased
+## 11.2.8 - February 17, 2026
 
 ### Fixed
 * Fix `didSubmitBiometricJob` not being returned from Android Biometric KYC Job.
