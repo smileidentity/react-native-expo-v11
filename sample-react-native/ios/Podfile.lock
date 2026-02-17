@@ -75,7 +75,6 @@ PODS:
   - hermes-engine (0.79.1):
     - hermes-engine/Pre-built (= 0.79.1)
   - hermes-engine/Pre-built (0.79.1)
-  - lottie-ios (4.5.2)
   - RCT-Folly (2024.11.18.00):
     - boost
     - DoubleConversion
@@ -1771,22 +1770,21 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - Sentry (8.55.0):
-    - Sentry/Core (= 8.55.0)
-  - Sentry/Core (8.55.0)
-  - SmileID (11.1.1):
-    - FingerprintJS (= 1.6.0)
-    - lottie-ios (= 4.5.2)
-    - Sentry (= 8.55.0)
-    - SmileIDSecurity (= 11.1.1)
-    - ZIPFoundation (= 0.9.19)
-  - SmileIDExpo (11.2.0):
+  - Sentry (8.57.1):
+    - Sentry/Core (= 8.57.1)
+  - Sentry/Core (8.57.1)
+  - SmileID (11.1.7):
+    - SmileIDSDK (= 11.1.7)
+  - SmileIDExpo (11.2.8):
     - ExpoModulesCore
-    - SmileID (= 11.1.1)
-  - SmileIDSecurity (11.1.1)
+    - SmileID (= 11.1.7)
+  - SmileIDSDK (11.1.7):
+    - FingerprintJS (= 1.6.0)
+    - Sentry (= 8.57.1)
+    - ZIPFoundation (= 0.9.20)
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
-  - ZIPFoundation (0.9.19)
+  - ZIPFoundation (0.9.20)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -1874,10 +1872,9 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FingerprintJS
-    - lottie-ios
     - Sentry
     - SmileID
-    - SmileIDSecurity
+    - SmileIDSDK
     - SocketRocket
     - ZIPFoundation
 
@@ -2058,7 +2055,6 @@ SPEC CHECKSUMS:
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
   hermes-engine: c32f2e405098bc1ebe30630a051ddce6f21d3c2e
-  lottie-ios: 96784afc26ea031d3e2b6cae342a4b8915072489
   RCT-Folly: e78785aa9ba2ed998ea4151e314036f6c49e6d82
   RCTDeprecation: 0ada4fb1e5c5637bff940dc40b94e2d3bf96b0ab
   RCTRequired: 76ca80ff10acb3834ed0dacba9645645009578a2
@@ -2122,13 +2118,13 @@ SPEC CHECKSUMS:
   ReactCodegen: 86758c0e13c6b245ff0cd7123cc5e8910d67546a
   ReactCommon: aa48e4fddbc6a0afa19dca39a1b6016c150b5db4
   RNSVG: 8a1054afe490b5d63b9792d7ae3c1fde8c05cdd0
-  Sentry: f7dddfabe691274d6d630f04621e1345f9d6b9e0
-  SmileID: 814fac7c88593349680276789688496f1a948403
-  SmileIDExpo: 26a753a223fdc88d3c30fd9588ce422e9ecce603
-  SmileIDSecurity: 2849074a33fa738cb7478f90b32b7f7333a14630
+  Sentry: ea4ca7cd1a46c77dcc8123804ce36d8f5603a841
+  SmileID: e27a45aef3108362867110a9fd38181881fd424a
+  SmileIDExpo: 0714751146ba396a3724225f98462ce4cbe17365
+  SmileIDSDK: f158a8575f22439a4dfbf6eb50211c4a896de237
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: d15f5aa644c466e917569ac43b19cbf17975239a
-  ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
+  ZIPFoundation: dfd3d681c4053ff7e2f7350bc4e53b5dba3f5351
 
 PODFILE CHECKSUM: 976e735ef03255c2b81103bddcbfc66bfdd87f27
 
