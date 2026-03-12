@@ -69,6 +69,9 @@ class DocumentVerificationParams : Record {
     var allowAgentMode: Boolean = false
 
     @Field
+    var forceAgentMode: Boolean = false
+
+    @Field
     var allowGalleryUpload: Boolean = false
 
     @Field
@@ -118,6 +121,7 @@ internal fun DocumentVerificationParams.toDocumentVerificationProps(): DocumentV
         autoCapture = this.autoCapture.toAutoCapture(),
         captureBothSides = this.captureBothSides,
         allowAgentMode = this.allowAgentMode,
+        forceAgentMode = this.forceAgentMode,
         allowGalleryUpload = this.allowGalleryUpload,
         showInstructions = this.showInstructions,
         showAttribution = this.showAttribution,
@@ -164,6 +168,9 @@ class EnhancedDocumentVerificationParams : Record {
 
     @Field
     var allowAgentMode: Boolean = false
+
+    @Field
+    var forceAgentMode: Boolean = false
 
     @Field
     var allowGalleryUpload: Boolean = false
@@ -218,6 +225,7 @@ internal fun EnhancedDocumentVerificationParams.toDocumentVerificationProps(): D
         autoCapture = this.autoCapture.toAutoCapture(),
         captureBothSides = this.captureBothSides,
         allowAgentMode = this.allowAgentMode,
+        forceAgentMode = this.forceAgentMode,
         allowGalleryUpload = this.allowGalleryUpload,
         showInstructions = this.showInstructions,
         showAttribution = this.showAttribution,
@@ -260,6 +268,9 @@ class SmartSelfieParams: Record {
     var allowAgentMode: Boolean = false
 
     @Field
+    var forceAgentMode: Boolean = false
+
+    @Field
     var showAttribution: Boolean = true
 
     @Field
@@ -287,6 +298,7 @@ internal fun SmartSelfieParams.toSmartSelfieProps(): SmartSelfieProps {
         jobId = this.jobId,
         allowNewEnroll = this.allowNewEnroll,
         allowAgentMode = this.allowAgentMode,
+        forceAgentMode = this.forceAgentMode,
         showAttribution = this.showAttribution,
         showInstructions = this.showInstructions,
         skipApiSubmission = this.skipApiSubmission,
@@ -311,6 +323,9 @@ class BiometricKYCParams: Record {
 
     @Field
     var allowAgentMode: Boolean = false
+
+    @Field
+    var forceAgentMode: Boolean = false
 
     @Field
     var showAttribution: Boolean = true
@@ -371,6 +386,7 @@ internal fun BiometricKYCParams.toBiometricKYCProps(): BiometricKYCProps {
         jobId = this.jobId,
         allowNewEnroll = this.allowNewEnroll,
         allowAgentMode = this.allowAgentMode,
+        forceAgentMode = this.forceAgentMode,
         showAttribution = this.showAttribution,
         showInstructions = this.showInstructions,
         skipApiSubmission = this.skipApiSubmission,

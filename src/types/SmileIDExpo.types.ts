@@ -43,6 +43,7 @@ export type DocumentVerificationParams = {
   autoCapture?: AutoCapture;
   captureBothSides?: boolean;
   allowAgentMode?: boolean;
+  forceAgentMode?: boolean;
   allowGalleryUpload?: boolean;
   showInstructions?: boolean;
   showAttribution?: boolean;
@@ -67,6 +68,7 @@ export type EnhancedDocumentVerificationParams = {
   autoCapture?: AutoCapture;
   captureBothSides?: boolean;
   allowAgentMode?: boolean;
+  forceAgentMode?: boolean;
   allowGalleryUpload?: boolean;
   showInstructions?: boolean;
   showAttribution?: boolean;
@@ -95,6 +97,7 @@ export type SmartSelfieParams = {
   jobId?: string;
   allowNewEnroll?: boolean;
   allowAgentMode?: boolean;
+  forceAgentMode?: boolean;
   showAttribution?: boolean;
   showInstructions?: boolean;
   skipApiSubmission?: boolean;
@@ -111,6 +114,7 @@ export type BiometricKYCParams = {
   jobId?: string;
   allowNewEnroll?: boolean;
   allowAgentMode?: boolean;
+  forceAgentMode?: boolean;
   showAttribution?: boolean;
   showInstructions?: boolean;
   skipApiSubmission?: boolean;

@@ -116,6 +116,7 @@ data class DocumentVerificationProps(
     val autoCapture: AutoCapture? = null,
     val captureBothSides: Boolean = true,
     val allowAgentMode: Boolean = false,
+    val forceAgentMode: Boolean = false,
     val allowGalleryUpload: Boolean = false,
     val showInstructions: Boolean = true,
     val showAttribution: Boolean = true,

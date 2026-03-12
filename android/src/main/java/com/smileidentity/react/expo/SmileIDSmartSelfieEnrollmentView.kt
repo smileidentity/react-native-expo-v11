@@ -103,6 +103,7 @@ data class SmartSelfieProps(
     val jobId: String? = null,
     val allowNewEnroll: Boolean = true,
     val allowAgentMode: Boolean = false,
+    val forceAgentMode: Boolean = false,
     val showAttribution: Boolean = true,
     val showInstructions: Boolean = true,
     val skipApiSubmission: Boolean = false,
