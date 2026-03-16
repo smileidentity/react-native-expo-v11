@@ -86,7 +86,8 @@ const documentVerificationParams: DocumentVerificationParams = {
   autoCaptureTimeout: 10, // this is in seconds,
   autoCapture: AutoCapture.AutoCapture,
   captureBothSides: false,
-  allowAgentMode: true,
+  allowAgentMode: false,
+  forceAgentMode: false,
   showInstructions: true,
   showAttribution: true,
   allowGalleryUpload: true,
@@ -104,6 +105,7 @@ const smartSelfieParams: SmartSelfieParams = {
   // jobId: 'job456', // Optional job ID
   allowNewEnroll: false,
   allowAgentMode: true,
+  forceAgentMode: false,
   showAttribution: true,
   showInstructions: true,
   skipApiSubmission: false,
@@ -162,7 +164,8 @@ const biometricKYCParams: BiometricKYCParams = {
   // userId: 'user123', // Optional user ID
   // jobId: 'job456', // Optional job ID
   allowNewEnroll: false,
-  allowAgentMode: true,
+  allowAgentMode: false,
+  forceAgentMode: false,
   showAttribution: true,
   showInstructions: true,
   smileSensitivity: SmileSensitivity.Normal,
