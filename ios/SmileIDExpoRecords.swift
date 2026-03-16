@@ -21,6 +21,7 @@ struct DocumentVerificationParams: Record {
     @Field public var autoCapture: AutoCaptureParams = .autoCapture
     @Field public var captureBothSides: Bool = true
     @Field public var allowAgentMode: Bool = false
+    @Field public var forceAgentMode: Bool = false
     @Field public var allowGalleryUpload: Bool = false
     @Field public var showInstructions: Bool = true
     @Field public var showAttribution: Bool = true
@@ -43,6 +44,7 @@ struct EnhancedDocumentVerificationParams: Record {
     @Field public var autoCapture: AutoCaptureParams = .autoCapture
     @Field public var captureBothSides: Bool = true
     @Field public var allowAgentMode: Bool = false
+    @Field public var forceAgentMode: Bool = false
     @Field public var allowGalleryUpload: Bool = false
     @Field public var showInstructions: Bool = true
     @Field public var showAttribution: Bool = true
@@ -80,6 +82,7 @@ struct SmartSelfieParams: Record {
     @Field public var jobId: String?
     @Field public var allowNewEnroll: Bool = true
     @Field public var allowAgentMode: Bool = false
+    @Field public var forceAgentMode: Bool = false
     @Field public var showAttribution: Bool = true
     @Field public var showInstructions: Bool = true
     @Field public var skipApiSubmission: Bool = false
@@ -94,6 +97,7 @@ struct BiometricKYCParams: Record {
     @Field public var jobId: String?
     @Field public var allowNewEnroll: Bool = true
     @Field public var allowAgentMode: Bool = false
+    @Field public var forceAgentMode: Bool = false
     @Field public var showAttribution: Bool = true
     @Field public var showInstructions: Bool = true
     @Field public var smileSensitivity: SmileSensitivityParams = .normal

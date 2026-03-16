@@ -58,6 +58,7 @@ struct SmartSelfieEnrollmentView: View {
                 jobId: config.jobId ?? generateJobId(),
                 allowNewEnroll: config.allowNewEnroll,
                 allowAgentMode: config.allowAgentMode,
+                forceAgentMode: config.forceAgentMode,
                 showAttribution: config.showAttribution,
                 showInstructions: config.showInstructions,
                 smileSensitivity: SmileSensitivity(from: config.smileSensitivity),
