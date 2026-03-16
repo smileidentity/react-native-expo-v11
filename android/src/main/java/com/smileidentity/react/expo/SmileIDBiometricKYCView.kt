@@ -85,6 +85,7 @@ private fun BiometricKYCView(
             forceAgentMode = props.forceAgentMode,
             showAttribution = props.showAttribution,
             showInstructions = props.showInstructions,
+            skipApiSubmission = props.skipApiSubmission,
             smileSensitivity = props.smileSensitivity,
             extraPartnerParams = props.extraPartnerParams,
             consentInformation = props.consentInformation,

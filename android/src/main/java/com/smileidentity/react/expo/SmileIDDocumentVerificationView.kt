@@ -89,7 +89,8 @@ private fun DocumentVerificationView(
             showAttribution = props.showAttribution,
             smileSensitivity = props.smileSensitivity,
             useStrictMode = props.useStrictMode,
-            extraPartnerParams = props.extraPartnerParams
+            extraPartnerParams = props.extraPartnerParams,
+            skipApiSubmission = props.skipApiSubmission
         ) { result ->
             when (result) {
                 is SmileIDResult.Success -> {

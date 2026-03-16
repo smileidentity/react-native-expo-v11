@@ -25,7 +25,7 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:compose-compiler-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
-        classpath "org.jlleitschuh.gradle:ktlint-gradle:14.0.1"
+        classpath "org.jlleitschuh.gradle:ktlint-gradle:14.1.0"
     }
 }
 
@@ -87,6 +87,6 @@ android {
 
 dependencies {
     implementation("com.jakewharton.timber:timber:5.0.1")
-    implementation("com.smileidentity:android-sdk:11.1.8")
+    implementation("com.smileidentity:android-sdk:11.1.9")
     implementation("androidx.fragment:fragment-ktx:1.8.9")
 }
