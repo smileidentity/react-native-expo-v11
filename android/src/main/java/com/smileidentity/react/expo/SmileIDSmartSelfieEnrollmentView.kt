@@ -80,6 +80,7 @@ private fun SmartSelfieEnrollmentView(
             jobId = props.jobId ?: randomJobId(),
             allowNewEnroll = props.allowNewEnroll,
             allowAgentMode = props.allowAgentMode,
+            forceAgentMode = props.forceAgentMode,
             showAttribution = props.showAttribution,
             showInstructions = props.showInstructions,
             skipApiSubmission = props.skipApiSubmission,

@@ -84,6 +84,7 @@ private fun DocumentVerificationView(
             autoCapture = props.autoCapture ?: AutoCapture.AutoCapture,
             captureBothSides = props.captureBothSides,
             allowAgentMode = props.allowAgentMode,
+            forceAgentMode = props.forceAgentMode,
             allowGalleryUpload = props.allowGalleryUpload,
             showInstructions = props.showInstructions,
             showAttribution = props.showAttribution,
