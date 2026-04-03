@@ -1,0 +1,68 @@
+version: 2
+
+# Only scan when dependency manifests change
+triggerPaths:
+  - 'package.json'
+  - 'package-lock.json'
+  - 'yarn.lock'
+  - 'sample-expo/package.json'
+  - 'sample-react-native/package.json'
+
+# Ignore paths that don't contain dependency manifests
+projectIgnorePaths:
+  - 'docs'
+  - 'scripts'
+  - '.github/workflows'
+
+# Enable high-value supply chain alerts, disable noise
+# Note: blocking vs warn behavior is configured in the Socket dashboard
+issueRules:
+  # Supply chain attacks - always alert
+  malware: true
+  didYouMean: true
+  installScripts: true
+  obfuscatedFile: true
+  troll: true
+  shellScriptOverride: true
+  gptMalware: true
+  manifestConfusion: true
+
+  # Risky dependency sources - always alert
+  gitDependency: true
+  httpDependency: true
+  gitHubDependency: true
+
+  # Suspicious behavior - always alert
+  networkAccess: true
+  shellAccess: true
+  envVars: true
+  highEntropyStrings: true
+  unstableOwnership: true
+  gptSecurity: true
+
+  # Code quality signals - alert
+  hasNativeCode: true
+  telemetry: true
+  invalidPackageJSON: true
+  unresolvedRequire: true
+
+  # Maintenance - alert
+  deprecated: true
+  unmaintained: true
+
+  # Noise - disable
+  trivialPackage: false
+  minifiedFile: false
+  dynamicRequire: false
+  debugAccess: false
+  filesystemAccess: false
+  usesEval: false
+  floatingDependency: false
+  unpopularPackage: false
+  gptAnomaly: false
+
+githubApp:
+  enabled: true
+  pullRequestAlertsEnabled: true
+  dependencyOverviewEnabled: true
+  projectReportsEnabled: true

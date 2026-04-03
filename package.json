@@ -5,6 +5,7 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
+    "preinstall": "[ \"$npm_config_global\" = \"true\" ] || [ \"$ALLOW_INSTALL\" = \"1\" ] || [ \"$CI\" = \"true\" ] || (echo 'Use npm ci' && exit 1)",
     "build": "expo-module build",
     "clean": "expo-module clean",
     "lint": "eslint --cache --cache-location .eslintcache --ext .ts,.tsx ./src",
