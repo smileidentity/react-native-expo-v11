@@ -3,7 +3,7 @@ on:
   pull_request:
     paths:
       - 'package.json'
-      - 'package-lock.json'
+      - 'yarn.lock'
   workflow_dispatch:
   schedule:
     - cron: '0 9 * * *'
@@ -20,12 +20,10 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
-          cache: 'npm'
-      - run: npm ci
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
       - name: Security audit
-        run: npm audit --omit=dev
-      - name: Verify registry signatures
-        run: npm audit signatures
+        run: yarn npm audit --environment production
       - name: Create issue on failure
         if: failure() && github.event_name != 'pull_request'
         env:
@@ -33,4 +31,6 @@ jobs:
         run: |
           EXISTING=$(gh issue list --label "security-audit" --state open --json number --jq 'length')
           if [ "$EXISTING" -gt 0 ]; then exit 0; fi
-          gh issue create --title "Security: npm audit vulnerabilities detected ($(date +%Y-%m-%d))" --label "security-audit,priority:high" --body "See [run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
+          gh label create "security-audit" --description "Automated security audit alert" --color "D93F0B" --force 2>/dev/null || true
+          gh label create "priority:high" --description "High priority" --color "B60205" --force 2>/dev/null || true
+          gh issue create --title "Security: audit vulnerabilities detected ($(date +%Y-%m-%d))" --label "security-audit" --label "priority:high" --body "See [run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"

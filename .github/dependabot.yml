@@ -5,6 +5,16 @@ updates:
     directory: /
     schedule:
       interval: weekly
+  - package-ecosystem: npm
+    open-pull-requests-limit: 0
+    directory: /sample-expo
+    schedule:
+      interval: weekly
+  - package-ecosystem: npm
+    open-pull-requests-limit: 0
+    directory: /sample-react-native
+    schedule:
+      interval: weekly
   - package-ecosystem: github-actions
     open-pull-requests-limit: 5
     directory: /
