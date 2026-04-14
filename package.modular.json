@@ -1,0 +1,62 @@
+{
+  "name": "@smile_identity/react-native-expo",
+  "version": "11.2.8",
+  "description": "Official Smile ID SDK for Expo - Modular Version",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "eslint --cache --cache-location .eslintcache --ext .ts,.tsx ./src",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "build:packages": "npm run build:core && npm run build:biometric && npm run build:document && npm run build:smartselfie",
+    "build:core": "cd packages/core && npm run build",
+    "build:biometric": "cd packages/biometric-kyc && npm run build",
+    "build:document": "cd packages/document-verification && npm run build",
+    "build:smartselfie": "cd packages/smart-selfie && npm run build",
+    "dev:packages": "concurrently \"npm run dev:core\" \"npm run dev:biometric\" \"npm run dev:document\" \"npm run dev:smartselfie\"",
+    "dev:core": "cd packages/core && npm run dev",
+    "dev:biometric": "cd packages/biometric-kyc && npm run dev",
+    "dev:document": "cd packages/document-verification && npm run dev",
+    "dev:smartselfie": "cd packages/smart-selfie && npm run dev"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "react-native-expo",
+    "SmileIDExpo",
+    "modular",
+    "tree-shaking",
+    "scoped-packages"
+  ],
+  "repository": "https://github.com/smileidentity/react-native-expo.git",
+  "bugs": {
+    "url": "https://github.com/smileidentity/react-native-expo.git/issues"
+  },
+  "author": "Harun Wangereka <harun@usesmileid.com> (https://github.com/wangerekaharun)",
+  "license": "MIT",
+  "homepage": "https://github.com/smileidentity/react-native-expo.git#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "eslint": "^8.57.0",
+    "expo": "^54.0.0",
+    "expo-module-scripts": "^4.1.6",
+    "react": "19.1.0",
+    "react-native": "0.81.4",
+    "concurrently": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

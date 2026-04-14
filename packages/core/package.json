@@ -1,0 +1,40 @@
+{
+  "name": "@smileid/core",
+  "version": "1.0.0",
+  "description": "Smile ID Core SDK - Base functionality and types",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "*",
+    "@types/react-native": "*"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "keywords": [
+    "smile-id",
+    "identity-verification",
+    "biometric",
+    "kyc",
+    "core"
+  ],
+  "author": "Smile ID",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

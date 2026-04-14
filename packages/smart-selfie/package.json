@@ -1,0 +1,42 @@
+{
+  "name": "@smileid/smart-selfie",
+  "version": "1.0.0",
+  "description": "Smile ID Smart Selfie - Facial recognition and selfie verification component",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@smileid/core": "^1.0.0",
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "*",
+    "@types/react-native": "*"
+  },
+  "peerDependencies": {
+    "@smileid/core": "^1.0.0",
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "keywords": [
+    "smile-id",
+    "smart-selfie",
+    "facial-recognition",
+    "selfie-verification",
+    "liveness-detection"
+  ],
+  "author": "Smile ID",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}
