@@ -30,8 +30,9 @@
   "author": "Harun Wangereka <harun@usesmileid.com> (https://github.com/wangerekaharun)",
   "license": "MIT",
   "homepage": "https://github.com/smileidentity/react-native-expo.git#readme",
-  "dependencies": {},
   "devDependencies": {
+    "@expo/config-plugins": "^55.0.8",
+    "@expo/config-types": "^55.0.5",
     "@types/react": "~19.1.10",
     "eslint": "^8.57.0",
     "expo": "^54.0.0",

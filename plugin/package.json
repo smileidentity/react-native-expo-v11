@@ -1,0 +1,21 @@
+{
+  "name": "@smile_identity/config-plugin",
+  "version": "1.0.0",
+  "description": "Config plugin for Smile ID Expo SDK",
+  "main": "withSmileID.js",
+  "types": "withSmileID.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "@expo/config-plugins": "^55.0.8"
+  },
+  "devDependencies": {
+    "@expo/config-types": "^55.0.5",
+    "typescript": "^6.0.2"
+  },
+  "peerDependencies": {
+    "expo": "*"
+  }
+}
