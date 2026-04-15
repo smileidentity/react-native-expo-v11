@@ -13,7 +13,7 @@ struct DocumentVerificationParams: Record {
     @Field public var userId: String?
     @Field public var jobId: String?
     @Field public var countryCode: String
-    @Field public var allowNewEnroll: Bool = true
+    @Field public var allowNewEnroll: Bool = false
     @Field public var documentType: String?
     @Field public var idAspectRatio: Double?
     @Field public var bypassSelfieCaptureWithFile: String?
@@ -36,7 +36,7 @@ struct EnhancedDocumentVerificationParams: Record {
     @Field public var userId: String?
     @Field public var jobId: String?
     @Field public var countryCode: String
-    @Field public var allowNewEnroll: Bool = true
+    @Field public var allowNewEnroll: Bool = false
     @Field public var documentType: String?
     @Field public var idAspectRatio: Double?
     @Field public var bypassSelfieCaptureWithFile: String?
@@ -80,7 +80,7 @@ extension ConsentInformationRecord {
 struct SmartSelfieParams: Record {
     @Field public var userId: String?
     @Field public var jobId: String?
-    @Field public var allowNewEnroll: Bool = true
+    @Field public var allowNewEnroll: Bool = false
     @Field public var allowAgentMode: Bool = false
     @Field public var forceAgentMode: Bool = false
     @Field public var showAttribution: Bool = true
@@ -95,7 +95,7 @@ struct SmartSelfieParams: Record {
 struct BiometricKYCParams: Record {
     @Field public var userId: String?
     @Field public var jobId: String?
-    @Field public var allowNewEnroll: Bool = true
+    @Field public var allowNewEnroll: Bool = false
     @Field public var allowAgentMode: Bool = false
     @Field public var forceAgentMode: Bool = false
     @Field public var showAttribution: Bool = true

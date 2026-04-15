@@ -262,7 +262,7 @@ class SmartSelfieParams: Record {
     var jobId: String? = null
 
     @Field
-    var allowNewEnroll: Boolean = true
+    var allowNewEnroll: Boolean = false
 
     @Field
     var allowAgentMode: Boolean = false
@@ -319,7 +319,7 @@ class BiometricKYCParams: Record {
     var jobId: String? = null
 
     @Field
-    var allowNewEnroll: Boolean = true
+    var allowNewEnroll: Boolean = false
 
     @Field
     var allowAgentMode: Boolean = false

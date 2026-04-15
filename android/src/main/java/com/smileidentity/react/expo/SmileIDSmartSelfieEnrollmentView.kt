@@ -102,7 +102,7 @@ private fun SmartSelfieEnrollmentView(
 data class SmartSelfieProps(
     val userId: String? = null,
     val jobId: String? = null,
-    val allowNewEnroll: Boolean = true,
+    val allowNewEnroll: Boolean = false,
     val allowAgentMode: Boolean = false,
     val forceAgentMode: Boolean = false,
     val showAttribution: Boolean = true,
