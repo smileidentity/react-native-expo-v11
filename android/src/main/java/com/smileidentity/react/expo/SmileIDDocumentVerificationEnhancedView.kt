@@ -79,12 +79,14 @@ private fun EnhancedDocumentVerificationView(
             autoCapture = props.autoCapture ?: AutoCapture.AutoCapture,
             captureBothSides = props.captureBothSides,
             allowAgentMode = props.allowAgentMode,
+            forceAgentMode = props.forceAgentMode,
             allowGalleryUpload = props.allowGalleryUpload,
             showInstructions = props.showInstructions,
             showAttribution = props.showAttribution,
             useStrictMode = props.useStrictMode,
             extraPartnerParams = props.extraPartnerParams,
-            consentInformation = props.consentInformation
+            consentInformation = props.consentInformation,
+            skipApiSubmission = props.skipApiSubmission
         ) { result ->
             when (result) {
                 is SmileIDResult.Success -> {

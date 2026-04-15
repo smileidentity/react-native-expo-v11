@@ -59,10 +59,12 @@ struct BiometricKYCView: View {
                 jobId: config.jobId ?? generateJobId(),
                 allowNewEnroll: config.allowNewEnroll,
                 allowAgentMode: config.allowAgentMode,
+                forceAgentMode: config.forceAgentMode,
                 showAttribution: config.showAttribution,
                 showInstructions: config.showInstructions,
                 smileSensitivity: SmileSensitivity(from: config.smileSensitivity),
                 useStrictMode: config.useStrictMode,
+                skipApiSubmission: config.skipApiSubmission,
                 extraPartnerParams: config.extraPartnerParams,
                 consentInformation: config.consentInformation?.toConsentInformation(),
                 delegate: delegate

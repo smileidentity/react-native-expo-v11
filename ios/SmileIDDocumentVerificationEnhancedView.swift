@@ -65,6 +65,7 @@ struct EnhancedDocumentVerificationView: View {
                 autoCapture: AutoCapture(from: config.autoCapture),
                 captureBothSides: config.captureBothSides,
                 allowAgentMode: config.allowAgentMode,
+                forceAgentMode: config.forceAgentMode,
                 allowGalleryUpload: config.allowGalleryUpload,
                 showInstructions: config.showInstructions,
                 skipApiSubmission: config.skipApiSubmission,

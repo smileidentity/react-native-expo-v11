@@ -80,6 +80,7 @@ private fun SmartSelfieEnrollmentView(
             jobId = props.jobId ?: randomJobId(),
             allowNewEnroll = props.allowNewEnroll,
             allowAgentMode = props.allowAgentMode,
+            forceAgentMode = props.forceAgentMode,
             showAttribution = props.showAttribution,
             showInstructions = props.showInstructions,
             skipApiSubmission = props.skipApiSubmission,
@@ -101,8 +102,9 @@ private fun SmartSelfieEnrollmentView(
 data class SmartSelfieProps(
     val userId: String? = null,
     val jobId: String? = null,
-    val allowNewEnroll: Boolean = true,
+    val allowNewEnroll: Boolean = false,
     val allowAgentMode: Boolean = false,
+    val forceAgentMode: Boolean = false,
     val showAttribution: Boolean = true,
     val showInstructions: Boolean = true,
     val skipApiSubmission: Boolean = false,

@@ -2388,12 +2388,12 @@ PODS:
   - Sentry (8.57.1):
     - Sentry/Core (= 8.57.1)
   - Sentry/Core (8.57.1)
-  - SmileID (11.1.7):
-    - SmileIDSDK (= 11.1.7)
-  - SmileIDExpo (11.2.8):
+  - SmileID (11.1.9):
+    - SmileIDSDK (= 11.1.9)
+  - SmileIDExpo (11.2.9):
     - ExpoModulesCore
-    - SmileID (= 11.1.7)
-  - SmileIDSDK (11.1.7):
+    - SmileID (= 11.1.9)
+  - SmileIDSDK (11.1.9):
     - FingerprintJS (= 1.6.0)
     - Sentry (= 8.57.1)
     - ZIPFoundation (= 0.9.20)
@@ -2738,9 +2738,9 @@ SPEC CHECKSUMS:
   ReactCommon: 394c6b92765cf6d211c2c3f7f6bc601dffb316a6
   RNSVG: 6f39605a4c4d200b11435c35bd077553c6b5963a
   Sentry: ea4ca7cd1a46c77dcc8123804ce36d8f5603a841
-  SmileID: e27a45aef3108362867110a9fd38181881fd424a
-  SmileIDExpo: 0714751146ba396a3724225f98462ce4cbe17365
-  SmileIDSDK: f158a8575f22439a4dfbf6eb50211c4a896de237
+  SmileID: 2ef7d2281b61b47f2a0ffc7c5766151e26421973
+  SmileIDExpo: 157607b8909b85a1316bb571b0312c894615fda3
+  SmileIDSDK: 2ae7eaf6bbc356b51ff7ed9163449cc7a5683941
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: a3ed390a19db0459bd6839823a6ac6d9c6db198d
   ZIPFoundation: dfd3d681c4053ff7e2f7350bc4e53b5dba3f5351

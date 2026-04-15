@@ -1,5 +1,19 @@
 # Release Notes
 
+## 11.2.9 - April 15, 2026
+
+### Changed
+* Bump Android SDK to [v11.1.9](https://github.com/smileidentity/android/releases/tag/v11.1.9)
+* Bump iOS SDK to [v11.1.9](https://github.com/smileidentity/ios/releases/tag/v11.1.9)
+
+### Added
+* Added `forceAgentMode` option on SmartSelfie Enrollment, SmartSelfie Authentication, Document Verification, 
+ Enhanced Document Verification and Biometric KYC. When enabled, the back camera is always used without showing a 
+ toggle switch to the user.
+
+### Fixed
+* Set `allowNewEnroll` default value to false across Android and iOS components.
+
 ## 11.2.8 - February 17, 2026
 
 ### Fixed
