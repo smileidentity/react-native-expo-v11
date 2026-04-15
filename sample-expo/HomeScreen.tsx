@@ -104,7 +104,7 @@ const smartSelfieParams: SmartSelfieParams = {
   // userId: 'user123', // Optional user ID
   // jobId: 'job456', // Optional job ID
   allowNewEnroll: false,
-  allowAgentMode: true,
+  allowAgentMode: false,
   forceAgentMode: false,
   showAttribution: true,
   showInstructions: true,
