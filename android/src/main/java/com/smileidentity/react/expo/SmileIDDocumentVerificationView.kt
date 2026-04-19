@@ -84,12 +84,14 @@ private fun DocumentVerificationView(
             autoCapture = props.autoCapture ?: AutoCapture.AutoCapture,
             captureBothSides = props.captureBothSides,
             allowAgentMode = props.allowAgentMode,
+            forceAgentMode = props.forceAgentMode,
             allowGalleryUpload = props.allowGalleryUpload,
             showInstructions = props.showInstructions,
             showAttribution = props.showAttribution,
             smileSensitivity = props.smileSensitivity,
             useStrictMode = props.useStrictMode,
-            extraPartnerParams = props.extraPartnerParams
+            extraPartnerParams = props.extraPartnerParams,
+            skipApiSubmission = props.skipApiSubmission
         ) { result ->
             when (result) {
                 is SmileIDResult.Success -> {
@@ -116,6 +118,7 @@ data class DocumentVerificationProps(
     val autoCapture: AutoCapture? = null,
     val captureBothSides: Boolean = true,
     val allowAgentMode: Boolean = false,
+    val forceAgentMode: Boolean = false,
     val allowGalleryUpload: Boolean = false,
     val showInstructions: Boolean = true,
     val showAttribution: Boolean = true,
