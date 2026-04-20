@@ -1,0 +1,36 @@
+name: Security Audit
+on:
+  pull_request:
+    paths:
+      - 'package.json'
+      - 'yarn.lock'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * *'
+
+jobs:
+  security-audit:
+    name: Security Audit
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+      - run: yarn install --frozen-lockfile
+      - name: Security audit
+        run: yarn audit --groups dependencies
+      - name: Create issue on failure
+        if: failure() && github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXISTING=$(gh issue list --label "security-audit" --state open --json number --jq 'length')
+          if [ "$EXISTING" -gt 0 ]; then exit 0; fi
+          gh label create "security-audit" --description "Automated security audit alert" --color "D93F0B" --force 2>/dev/null || true
+          gh label create "priority:high" --description "High priority" --color "B60205" --force 2>/dev/null || true
+          gh issue create --title "Security: audit vulnerabilities detected ($(date +%Y-%m-%d))" --label "security-audit" --label "priority:high" --body "See [run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})"
