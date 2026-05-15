@@ -24,9 +24,9 @@
     "react-native-expo",
     "SmileIDExpo"
   ],
-  "repository": "https://github.com/smileidentity/react-native-expo.git",
+  "repository": "https://github.com/smileidentity/react-native-expo-v11.git",
   "bugs": {
-    "url": "https://github.com/smileidentity/react-native-expo.git/issues"
+    "url": "https://github.com/smileidentity/react-native-expo-v11/issues"
   },
   "author": "Harun Wangereka <harun@usesmileid.com> (https://github.com/wangerekaharun)",
   "license": "MIT",
