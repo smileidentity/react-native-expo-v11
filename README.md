@@ -287,38 +287,7 @@ Other Smile ID products can be integrated in a similar way using the provided co
 
 ## Troubleshooting
 
-### iOS: Swift Module Interface Verification Error
-
-If you encounter a build error like:
-
-```
-SwiftVerifyEmittedModuleInterface failed with a nonzero exit code
-```
-
-or
-
-```
-Verifying emitted module interface SmileID.swiftinterface failed
-```
-
-This is caused by Swift module interface verification with the SmileID iOS SDK. To resolve this, add the following to your `ios/Podfile` inside the `post_install` block:
-
-```ruby
-post_install do |installer|
-  # ... existing post_install code ...
-
-  # Fix SmileID Swift module interface verification error
-  installer.pods_project.targets.each do |target|
-    if target.name == 'SmileID'
-      target.build_configurations.each do |config|
-        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'NO'
-      end
-    end
-  end
-end
-```
-
-Then run `pod install` again and rebuild your project.
+Common build issues and their workarounds are documented in [TROUBLESHOOTING.md](TROUBLESHOOTING.md).
 
 ## Getting Help
 
