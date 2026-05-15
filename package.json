@@ -24,7 +24,7 @@
     "react-native-expo",
     "SmileIDExpo"
   ],
-  "repository": "https://github.com/smileidentity/react-native-expo.git",
+  "repository": "https://github.com/smileidentity/react-native-expo-v11.git",
   "bugs": {
     "url": "https://github.com/smileidentity/react-native-expo.git/issues"
   },
