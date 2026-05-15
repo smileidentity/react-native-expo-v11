@@ -5,11 +5,38 @@ on:
     types:
       - created
       - published
+  workflow_call:
+    inputs:
+      tag_name:
+        description: 'Release tag to publish notes for (used when invoked from CI)'
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Release tag to publish notes for (e.g. v11.2.10)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
 
 jobs:
   update-docs-release-notes:
     runs-on: ubuntu-latest
+    env:
+      RELEASE_TAG: ${{ inputs.tag_name || github.event.release.tag_name }}
     steps:
+      - name: Validate release tag
+        run: |
+          if [ -z "${RELEASE_TAG}" ]; then
+            echo "RELEASE_TAG is empty; cannot proceed" >&2
+            exit 1
+          fi
+          if ! printf '%s' "${RELEASE_TAG}" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z]+(\.[0-9A-Za-z]+)*)?$'; then
+            echo "RELEASE_TAG '${RELEASE_TAG}' is not a valid v-prefixed semver" >&2
+            exit 1
+          fi
       - name: Checkout react-native-expo
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
         with:
@@ -27,9 +54,9 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           path: docs
-          commit-message: React Native Expo ${{ github.event.release.tag_name }} Release Notes
-          title: React Native Expo ${{ github.event.release.tag_name }} Release Notes
+          commit-message: React Native Expo ${{ env.RELEASE_TAG }} Release Notes
+          title: React Native Expo ${{ env.RELEASE_TAG }} Release Notes
           body: Automated PR to update the release notes
-          branch: react-native-expo-release-notes-${{ github.event.release.tag_name }}
+          branch: react-native-expo-release-notes-${{ env.RELEASE_TAG }}
           labels: "release-notes"
           team-reviewers: "smileidentity/mobile"
