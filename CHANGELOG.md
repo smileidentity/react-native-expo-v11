@@ -3,19 +3,19 @@
 ### 11.2.11 - Aug 7, 2026
 
 ### Changed
-* Bump Android SDK to [v11.2.0](https://github.com/smileidentity/android/releases/tag/v11.2.0)
+* Bump Android SDK to [v11.2.0](https://github.com/smileidentity/android-v11/releases/tag/v11.2.0)
 * Bump iOS SDK to [v11.2.0](https://github.com/smileidentity/ios/releases/tag/v11.2.0)
 
 ### 11.2.10 - May 15, 2026
 
 ### Changed
-* Bump Android SDK to [v11.1.11](https://github.com/smileidentity/android/releases/tag/v11.1.11)
+* Bump Android SDK to [v11.1.11](https://github.com/smileidentity/android-v11/releases/tag/v11.1.11)
 * Bump iOS SDK to [v11.1.11](https://github.com/smileidentity/ios/releases/tag/v11.1.11)
 
 ## 11.2.9 - April 15, 2026
 
 ### Changed
-* Bump Android SDK to [v11.1.9](https://github.com/smileidentity/android/releases/tag/v11.1.9)
+* Bump Android SDK to [v11.1.9](https://github.com/smileidentity/android-v11/releases/tag/v11.1.9)
 * Bump iOS SDK to [v11.1.9](https://github.com/smileidentity/ios/releases/tag/v11.1.9)
 
 ### Added
@@ -35,7 +35,7 @@
 ## 11.2.7 - January 23, 2026
 
 ### Changed
-* Bump Android SDK to [v11.1.7](https://github.com/smileidentity/android/releases/tag/v11.1.7)
+* Bump Android SDK to [v11.1.7](https://github.com/smileidentity/android-v11/releases/tag/v11.1.7)
 * Bump iOS SDK to [v11.1.7](https://github.com/smileidentity/ios/releases/tag/v11.1.7)
 
 ## 11.2.1 - December 23, 2025
@@ -44,7 +44,7 @@
 * Renamed `selfie` return type on `SmileIDDocumentVerificationView` and  `SmileIDDocumentVerificationEnhancedView` to
  `selfieFile` to match Android and the docs. 
 * Extracted result mapping logic on Android to separate extension functions.
-* Bump Android SDK to [v11.1.6](https://github.com/smileidentity/android/releases/tag/v11.1.6)
+* Bump Android SDK to [v11.1.6](https://github.com/smileidentity/android-v11/releases/tag/v11.1.6)
 * Bump iOS SDK to [v11.1.5](https://github.com/smileidentity/ios/releases/tag/v11.1.5)
 
 ### Added
@@ -63,7 +63,7 @@
     * Upgraded Android Gradle Plugin (AGP) to version 8.13
 
 ### Changed
-* **Android SDK**: Bumped to [v11.1.2](https://github.com/smileidentity/android/releases/tag/v11.1.2)
+* **Android SDK**: Bumped to [v11.1.2](https://github.com/smileidentity/android-v11/releases/tag/v11.1.2)
 * **sample-react-native**: Updated Metro and package configuration to use a local SDK source, fixed iOS entry point, and resolved TypeScript type and path issues
 
 ### Added
