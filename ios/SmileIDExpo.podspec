@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.dependency 'ExpoModulesCore'
 
-  s.dependency 'SmileID', '11.1.11'
+  s.dependency 'SmileID', '11.2.0'
 
   # Swift/Objective-C compatibility
   s.pod_target_xcconfig = {
