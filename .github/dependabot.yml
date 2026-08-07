@@ -10,6 +10,17 @@ updates:
     directory: /sample-expo
     schedule:
       interval: weekly
+    # Transitive deps of the sample app whose security PRs were repeatedly
+    # closed without merging (all dependabot PRs closed unmerged, May-Aug 2026).
+    # Ignoring them also suppresses future security-update PRs.
+    ignore:
+      - dependency-name: '@babel/core'
+      - dependency-name: 'brace-expansion'
+      - dependency-name: 'fast-uri'
+      - dependency-name: 'js-yaml'
+      - dependency-name: 'postcss'
+      - dependency-name: 'shell-quote'
+      - dependency-name: 'ws'
   - package-ecosystem: npm
     open-pull-requests-limit: 0
     directory: /sample-react-native
