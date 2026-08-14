@@ -10,18 +10,15 @@ updates:
     directory: /sample-expo
     schedule:
       interval: weekly
-    # Transitive deps of the sample app from the 25 dependabot PRs closed
-    # unmerged May-Aug 2026. With PR limit 0 this block only ever opens
-    # security-update PRs, so ignoring a name here stops ALL future security
-    # PRs for it in /sample-expo (alerts still appear in the Security tab).
+    # @expo/metro-config 54.0.6 depends on "postcss": "~8.4.32", which caps
+    # postcss below 8.5.0, while the lowest fix for its four open advisories
+    # (GHSA-qx2v-qp2m-jg93, GHSA-6g55-p6wh-862q, GHSA-r28c-9q8g-f849,
+    # GHSA-fxqj-rqcc-2cmp) is 8.5.10. No lockfile-only update can satisfy
+    # them, so there is no version Dependabot could open a PR for. Drop this
+    # entry once @expo/metro-config widens the range; until then the alerts
+    # stay visible in the Security tab.
     ignore:
-      - dependency-name: '@babel/core'
-      - dependency-name: brace-expansion
-      - dependency-name: fast-uri
-      - dependency-name: js-yaml
       - dependency-name: postcss
-      - dependency-name: shell-quote
-      - dependency-name: ws
   - package-ecosystem: npm
     open-pull-requests-limit: 0
     directory: /sample-react-native
