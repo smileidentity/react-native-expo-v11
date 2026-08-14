@@ -19,6 +19,10 @@ updates:
     # stay visible in the Security tab.
     ignore:
       - dependency-name: postcss
+        # Scoped rather than blanket: only 8.4.x is reachable under the cap above,
+        # so this stays quiet today but stops ignoring postcss the moment a fixed
+        # 8.5.x becomes installable — the entry expires itself.
+        versions: ['< 8.5.0']
   - package-ecosystem: npm
     open-pull-requests-limit: 0
     directory: /sample-react-native
