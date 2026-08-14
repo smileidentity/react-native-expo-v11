@@ -73,11 +73,6 @@ PODS:
     - Yoga
   - fast_float (8.0.0)
   - FBLazyVector (0.81.4)
-  - FingerprintJS (1.6.0):
-    - FingerprintJS/Core (= 1.6.0)
-  - FingerprintJS/Core (1.6.0):
-    - FingerprintJS/SystemControl
-  - FingerprintJS/SystemControl (1.6.0)
   - fmt (11.0.2)
   - glog (0.3.5)
   - hermes-engine (0.81.4):
@@ -2385,21 +2380,14 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - Sentry (8.58.4):
-    - Sentry/Core (= 8.58.4)
-  - Sentry/Core (8.58.4)
-  - SmileID (11.2.0):
-    - SmileIDSDK (= 11.2.0)
-  - SmileIDExpo (11.2.11):
+  - SmileID (11.2.1):
+    - SmileIDSDK (= 11.2.1)
+  - SmileIDExpo (11.2.12):
     - ExpoModulesCore
-    - SmileID (= 11.2.0)
-  - SmileIDSDK (11.2.0):
-    - FingerprintJS (= 1.6.0)
-    - Sentry (~> 8.57)
-    - ZIPFoundation (= 0.9.20)
+    - SmileID (= 11.2.1)
+  - SmileIDSDK (11.2.1)
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
-  - ZIPFoundation (0.9.20)
 
 DEPENDENCIES:
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
@@ -2487,12 +2475,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - FingerprintJS
-    - Sentry
     - SmileID
     - SmileIDSDK
     - SocketRocket
-    - ZIPFoundation
 
 EXTERNAL SOURCES:
   boost:
@@ -2669,7 +2654,6 @@ SPEC CHECKSUMS:
   ExpoModulesCore: e4a127dbaceebb330d5f664bef50c8e1597843ac
   fast_float: b32c788ed9c6a8c584d114d0047beda9664e7cc6
   FBLazyVector: 941bef1c8eeabd9fe1f501e30a5220beee913886
-  FingerprintJS: 3a0c3e7f5035ecae199e5e5836200d9b20f1266a
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
   hermes-engine: 35c763d57c9832d0eef764316ca1c4d043581394
@@ -2737,13 +2721,11 @@ SPEC CHECKSUMS:
   ReactCodegen: 1d05923ad119796be9db37830d5e5dc76586aa00
   ReactCommon: 394c6b92765cf6d211c2c3f7f6bc601dffb316a6
   RNSVG: 6f39605a4c4d200b11435c35bd077553c6b5963a
-  Sentry: 5321d74bdd28d6f6f8beaa1ca06f1fdc746bff49
-  SmileID: 848c46109ef664eae1491c78642b273e4a0997c5
-  SmileIDExpo: 6d206030f8062746f9700ebf364c048eab471aee
-  SmileIDSDK: d4888e5df8039f2eec1f10a31c81bd681262d911
+  SmileID: 8a64fd13da9bd1a8b623496ad32d225b5d378583
+  SmileIDExpo: 1413dfa90ac468fdaee2dd7541feaf97989c338d
+  SmileIDSDK: 022ac26d652546120578ec37675434289e315001
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: a3ed390a19db0459bd6839823a6ac6d9c6db198d
-  ZIPFoundation: dfd3d681c4053ff7e2f7350bc4e53b5dba3f5351
 
 PODFILE CHECKSUM: 7b87b4db0d8a54038e473bca5fbe96113efbb843
 
