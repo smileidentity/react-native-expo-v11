@@ -2380,12 +2380,12 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - SmileID (11.2.1):
-    - SmileIDSDK (= 11.2.1)
-  - SmileIDExpo (11.2.12):
+  - SmileID (11.2.2):
+    - SmileIDSDK (= 11.2.2)
+  - SmileIDExpo (11.2.13):
     - ExpoModulesCore
-    - SmileID (= 11.2.1)
-  - SmileIDSDK (11.2.1)
+    - SmileID (= 11.2.2)
+  - SmileIDSDK (11.2.2)
   - SocketRocket (0.7.1)
   - Yoga (0.0.0)
 
@@ -2721,9 +2721,9 @@ SPEC CHECKSUMS:
   ReactCodegen: 1d05923ad119796be9db37830d5e5dc76586aa00
   ReactCommon: 394c6b92765cf6d211c2c3f7f6bc601dffb316a6
   RNSVG: 6f39605a4c4d200b11435c35bd077553c6b5963a
-  SmileID: 8a64fd13da9bd1a8b623496ad32d225b5d378583
-  SmileIDExpo: 1413dfa90ac468fdaee2dd7541feaf97989c338d
-  SmileIDSDK: 022ac26d652546120578ec37675434289e315001
+  SmileID: 2b00dcddb7f9f3799a02ec414fb03bf6e1794ccc
+  SmileIDExpo: 925844c35010f406e8cd4def0fb87fb1f46228d7
+  SmileIDSDK: 46977dbe7c7b675b8b7b3f3be33fc252b323d0b4
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: a3ed390a19db0459bd6839823a6ac6d9c6db198d
 
