@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Setup
         uses: ./.github/actions/setup
-      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
         with:
           distribution: 'zulu'
           java-version: '17'
@@ -69,13 +69,15 @@ jobs:
           key: ${{ runner.os }}-sample-expo-node_modules-${{ hashFiles('sample-expo/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-sample-expo-node_modules-
-      - name: Gradle assemble sample-expo
-        working-directory: sample-expo/android
-        run: ./gradlew --no-daemon assembleDebug
+      # Must run before Gradle: :expo-constants:createExpoConfig resolves sample-expo's config plugins
+      # (expo-build-properties) from sample-expo/node_modules, which a cold cache won't provide.
       - name: Install sample-expo dependencies
         run: |
           cd sample-expo
           if [ -f yarn.lock ]; then yarn install --frozen-lockfile; else yarn install; fi
+      - name: Gradle assemble sample-expo
+        working-directory: sample-expo/android
+        run: ./gradlew --no-daemon assembleDebug
       - name: Prebuild sample-expo app
         run: |
           cd sample-expo
