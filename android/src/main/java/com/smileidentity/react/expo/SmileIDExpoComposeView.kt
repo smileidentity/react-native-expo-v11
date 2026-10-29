@@ -176,13 +176,16 @@ abstract class SmileIDExpoComposeView(
      * The children are already detached by the time this runs, and removing them now detaches
      * the [ComposeView] a second time, which crashes in Compose's accessibility delegate once
      * its handler is gone ("Unable to destroy activity": NullPointerException). The removal
-     * waits until the detach pass has finished, and is skipped if the view was attached again.
+     * waits until the detach pass has finished, and is skipped if the view was attached again;
+     * the ViewModel cleanup goes with it, so a reattached view keeps the state it shows.
      */
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
         mainHandler.post {
-            if (!isAttachedToWindow) removeAllViews()
+            if (!isAttachedToWindow) {
+                removeAllViews()
+                cleanup()
+            }
         }
-        cleanup()
     }
 }
