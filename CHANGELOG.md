@@ -1,5 +1,10 @@
 # Release Notes
 
+### Unreleased
+
+### Fixed
+* Fixed an Android crash ("Unable to destroy activity") when a screen showing a Smile ID view closed, in apps that use an older version of Jetpack Compose.
+
 ### 11.2.13 - Sep 10, 2026
 
 ### Changed
