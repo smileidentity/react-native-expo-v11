@@ -1,6 +1,8 @@
 package com.smileidentity.react.expo
 
 import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.ComposeView
@@ -45,6 +47,8 @@ abstract class SmileIDExpoComposeView(
      * This is primarily used to explicitly clear ViewModel state from Smile ID native SDK components.
      */
     private var customViewModelStoreOwner: ViewModelStoreOwner? = null
+
+    private val mainHandler = Handler(Looper.getMainLooper())
 
     /**
      * Implement this to define the root Composable UI content for this view.
@@ -168,10 +172,17 @@ abstract class SmileIDExpoComposeView(
     /**
      * Called when the view is detached from the window.
      * Removes all views and performs cleanup of ViewModel and Compose resources.
+     *
+     * The children are already detached by the time this runs, and removing them now detaches
+     * the [ComposeView] a second time, which crashes in Compose's accessibility delegate once
+     * its handler is gone ("Unable to destroy activity": NullPointerException). The removal
+     * waits until the detach pass has finished, and is skipped if the view was attached again.
      */
     override fun onDetachedFromWindow() {
         super.onDetachedFromWindow()
-        removeAllViews()
+        mainHandler.post {
+            if (!isAttachedToWindow) removeAllViews()
+        }
         cleanup()
     }
 }
