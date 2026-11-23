@@ -85,7 +85,7 @@ jobs:
 
   ios-validate:
     # React Native 0.81 (Expo SDK 54) requires Xcode >= 16.1, which is available on macos-15 runners
-    runs-on: macos-15
+    runs-on: blacksmith-6vcpu-macos-15
     needs: build-library
     timeout-minutes: 45
     steps:
