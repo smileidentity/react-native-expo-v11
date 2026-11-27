@@ -1,9 +1,13 @@
 # Release Notes
 
-### Unreleased
+### 11.2.14 - Nov 27, 2026
 
 ### Fixed
 * Fixed an Android crash ("Unable to destroy activity") when a screen showing a Smile ID view closed, in apps that use an older version of Jetpack Compose.
+
+### Changed
+* Bump Android SDK to [v11.2.3](https://github.com/smileidentity/android-v11/releases/tag/v11.2.3)
+* Bump iOS SDK to [v11.2.4](https://github.com/smileidentity/ios/releases/tag/v11.2.4)
 
 ### 11.2.13 - Sep 10, 2026
 
